@@ -1,0 +1,25 @@
+name: Terraform Destroy EC2
+on:
+  workflow_dispatch:
+
+jobs:
+  destroy:
+    runs-on: label-1
+    env:
+     
+      AWS_REGION: ap-south-1
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+
+      - name: Terraform Init
+        run: terraform init
+         
+
+      - name: Terraform Plan 
+        run: terraform plan 
+      
+
+      - name: Terraform Destroy
+        run: terraform destroy -auto-approve 
