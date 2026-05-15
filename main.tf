@@ -9,4 +9,4 @@ resource "aws_instance" "example" {
     Name = "GitHubActionsEC2"
   }
 }
-
+# change version
